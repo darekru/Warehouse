@@ -24,6 +24,7 @@ namespace Warehouse
             int chosenOption = 0;
 
             Int32.TryParse(choice, out chosenOption);
+            Console.WriteLine($"wybrana opcja: {chosenOption}");
 
 
         }
