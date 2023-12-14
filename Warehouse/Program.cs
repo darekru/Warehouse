@@ -19,6 +19,7 @@ namespace Warehouse
 
             //Stała
             const string FILE_NAME = "C\\WarehouseFiles\\ImportFile.xlsx";
+            //const string FILE_NAME = @"C\WarehouseFiles\ImportFile.xlsx";  //@ małpa - nie potrzeba w ścieżce pdwójnych backslashy
 
             //zmienna
             int chosenOption = 0;
@@ -49,8 +50,12 @@ namespace Warehouse
             Console.WriteLine(item.Name); //NIE! wyświetli Apple
             Console.WriteLine(item2.Name); //NIE! wyświetli Apple
 
+            string str = "Napisy o dowolnej długości";
 
-
+            Console.WriteLine("Select item category: \r\n 1. Groceery \r\n 2. Clothing \r\n 3. Electronics");
+            Console.WriteLine("To jest backslash \\ a to cudzysłów \" "); // znak za backslashem jest normalnie wyświetlany
+            Console.WriteLine(@"tak można wyświetlić backslash \ ale nie cudzysłów"); //znak @ przed stringiem
+            Console.WriteLine($"to jest string z wstrzykniętymi wartościami {str}, {chosenOption}");
         }
     }
 }
