@@ -28,7 +28,6 @@ namespace Warehouse
             Console.WriteLine($"wybrana nowa opcja: {chosenOption}");
 
             //----L_2.4
-            Item item = new Item() { Id=1, Name = "Apple"};
 
             int a = 5;
             int b = a;
@@ -39,6 +38,17 @@ namespace Warehouse
             b = 50;
             Console.WriteLine(a); //Wyświetli 5
             Console.WriteLine(b); //Wyświetli 50
+
+            Item item = new Item() { Id = 1, Name = "Apple" };
+            Item item2 = item; //przypisujemy referencję ze zmiennej item
+
+            Console.WriteLine(item.Name); //wyświetli Apple
+            Console.WriteLine(item2.Name); //wyświetli Apple
+
+            item2.Name = "Watermelon";
+            Console.WriteLine(item.Name); //NIE! wyświetli Apple
+            Console.WriteLine(item2.Name); //NIE! wyświetli Apple
+
 
 
         }
