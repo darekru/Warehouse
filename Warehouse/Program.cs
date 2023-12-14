@@ -27,6 +27,19 @@ namespace Warehouse
             Console.WriteLine($"wybrana opcja: {chosenOption}");
             Console.WriteLine($"wybrana nowa opcja: {chosenOption}");
 
+            //----L_2.4
+            Item item = new Item() { Id=1, Name = "Apple"};
+
+            int a = 5;
+            int b = a;
+
+            Console.WriteLine(a); //Wyświetli 5
+            Console.WriteLine(b); //Wyświetli 5
+
+            b = 50;
+            Console.WriteLine(a); //Wyświetli 5
+            Console.WriteLine(b); //Wyświetli 50
+
 
         }
     }
