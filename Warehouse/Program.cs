@@ -1,4 +1,6 @@
 ﻿using System;
+using System.ComponentModel;
+using static Warehouse.Helpers;
 
 namespace Warehouse
 {
@@ -42,6 +44,7 @@ namespace Warehouse
 
             Item item = new Item() { Id = 1, Name = "Apple" };
             Item item2 = item; //przypisujemy referencję ze zmiennej item
+         
 
             Console.WriteLine(item.Name); //wyświetli Apple
             Console.WriteLine(item2.Name); //wyświetli Apple
@@ -56,6 +59,67 @@ namespace Warehouse
             Console.WriteLine("To jest backslash \\ a to cudzysłów \" "); // znak za backslashem jest normalnie wyświetlany
             Console.WriteLine(@"tak można wyświetlić backslash \ ale nie cudzysłów"); //znak @ przed stringiem
             Console.WriteLine($"to jest string z wstrzykniętymi wartościami {str}, {chosenOption}");
+
+            //-----L_2.5
+
+            Console.WriteLine("Select item category");
+            Console.WriteLine("1. Groceery");
+            Console.WriteLine("2. Clothing");
+            //Console.WriteLine("3. Electronics");
+
+            string category = Console.ReadLine();
+
+            ItemType chosenCategory;
+
+            Enum.TryParse(category, out chosenCategory);
+
+            if (chosenOption == 1)
+            {
+                if (chosenCategory == ItemType.Clothing) //zagnieżdżony if
+                {
+                    //.....
+                }
+                Item item1 = new Item() { Id = 2, Name = "Strawberry" };
+                item1.CategoryId = chosenCategory == ItemType.Grocery ? 1 : 2;  //operator trójargumentowy
+            }
+            else if(chosenOption == 2)
+            {
+                //usuwanie produktu
+            }
+            else if(chosenOption == 4)
+            {
+
+            }
+            else
+            {
+                // inna operacja
+            }
+
+            ItemService itemservice = new ItemService();
+
+            switch (chosenOption)
+            {
+                case 1:
+                    itemservice.AddItem();
+                    break;
+                case 2:
+                    itemservice.RemoveItem();
+                    break;
+                default:
+                    // wyrzuć wyjątek
+                    break;
+            }
+
+            //switch expressions
+            Item item3 = new Item() { Id = 3, Name = "Strawberry" };
+            item3.CategoryId = chosenCategory switch
+            {
+                ItemType.Grocery => 1,
+                ItemType.Clothing => 2, 
+                ItemType.Electronisc => 3,
+                _ => -1    //to jest default
+            };  // tu musi być średnik
+
         }
     }
 }

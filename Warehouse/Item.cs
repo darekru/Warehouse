@@ -9,6 +9,9 @@ namespace Warehouse
     public class Item
     {
         public int Id { get; set; }
-        public string Name { get; set; }    
+        public string Name { get; set; }
+
+        //-----L_2.5
+        public int CategoryId { get; set; }
     }
 }

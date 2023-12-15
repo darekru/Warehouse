@@ -18,7 +18,7 @@ namespace Warehouse
 
             bool isTrue = false;
             
-            int number1;  //F12 na int przenosi do okna definicji
+            int number1;  //F12 na int przenosi do okna definicji int
 
             number1 = 0;
 
@@ -45,5 +45,22 @@ namespace Warehouse
                 nameOfStructure = name;
             }
         }
+
+        //-----L_2.5
+
+        public class ItemService
+        {
+            public void AddItem()
+            {
+
+            }
+
+            public void RemoveItem()
+            {
+
+            }
+        }
+
+
     }
 }
