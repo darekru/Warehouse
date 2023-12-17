@@ -120,6 +120,8 @@ namespace Warehouse
                 _ => -1    //to jest default
             };  // tu musi być średnik
 
+            // L 2.6 L_2.7
+            // a++ a-- (!=) - nie równe && || ! - zaprzeczenie
         }
     }
 }
