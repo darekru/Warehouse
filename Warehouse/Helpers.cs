@@ -34,6 +34,25 @@ namespace Warehouse
             Electronisc
         }
 
+        //L_2.12 enum
+        public enum Weeksay
+        {
+            Monday,
+            Tuesday,
+            Wednesday,
+            Thursday,
+            Friday, 
+            Saturday,
+            Sunday
+        }
+
+        public enum ReportFrequency
+        {
+            Weekly = 7,
+            Biweekly = 14,
+            Quartely = 90
+        }
+
         public struct SomeStructure
         {
             private int numberForStructure;

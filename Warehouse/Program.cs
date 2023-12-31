@@ -173,6 +173,12 @@ namespace Warehouse
             listOfItems.Remove(new Item() { Id = 10, Name = "Apple" });
             listOfItems.RemoveRange(0, 2);
 
+            //L_2.12 enum
+
+            ItemType itemType = ItemType.Electronisc;
+            Console.WriteLine(itemType);
+            int categoryId = (int)itemType;   //rzutowanie na int
+            Console.WriteLine(categoryId);
 
         }
     }
