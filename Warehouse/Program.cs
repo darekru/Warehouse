@@ -149,6 +149,31 @@ namespace Warehouse
 
             int[] ta = new int[10];
             int[] ta2 = new int[10] {1,2,3,4,5,6,7,8,9,10};
+
+            //L 2.11 listy
+
+            List<int> list = new List<int>();
+
+            list.Add(5);
+
+            list.AddRange(new List<int>() {1,2,3,4});
+
+            List<Item> listOfItems = new List<Item>();
+
+            listOfItems.Add(new Item() { Id = 10, Name = "Apple" });
+            listOfItems.Add(new Item() { Id = 11, Name = "Strawberry" });
+            listOfItems.Add(new Item() { Id = 12, Name = "Watermelon" });
+
+            foreach(var itemx in listOfItems)
+            {
+                Console.WriteLine("Aktualny produkt to: " + itemx.Name);
+            }
+
+            //listOfItems.Sort(); nie działa!!!
+            listOfItems.Remove(new Item() { Id = 10, Name = "Apple" });
+            listOfItems.RemoveRange(0, 2);
+
+
         }
     }
 }
