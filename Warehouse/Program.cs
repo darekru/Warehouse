@@ -121,7 +121,34 @@ namespace Warehouse
             };  // tu musi być średnik
 
             // L 2.6 L_2.7
-            // a++ a-- (!=) - nie równe && || ! - zaprzeczenie
+            // a++ a += 2, a-- (!=) - nie równe && || ! - zaprzeczenie
+            
+            // L 2.8 pętle
+
+            int c = 0;
+            while (c < 10)
+            {
+                Console.WriteLine(c);
+                c++;
+            }
+
+            c = 10; //wykona się tylko raz
+            do
+            {
+                Console.WriteLine($"{c} do while");
+                c++;
+            }
+            while (c < 10);
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine($"{i} for");
+            }
+
+            //L 2.10 tablice
+
+            int[] ta = new int[10];
+            int[] ta2 = new int[10] {1,2,3,4,5,6,7,8,9,10};
         }
     }
 }
