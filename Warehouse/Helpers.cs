@@ -67,6 +67,7 @@ namespace Warehouse
 
         //-----L_2.5
 
+        /*
         public class ItemService
         {
             public void AddItem()
@@ -78,8 +79,9 @@ namespace Warehouse
             {
 
             }
+        
         }
-
+        */
 
     }
 }
