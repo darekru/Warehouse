@@ -180,6 +180,16 @@ namespace Warehouse
             int categoryId = (int)itemType;   //rzutowanie na int
             Console.WriteLine(categoryId);
 
+            //L_2.13 klasy
+
+            Person person = new Person();
+            person.Power = 100;
+            person.Sex = "Male";
+            person.Height = 175;
+            person.Weight = 80;
+
+            Console.WriteLine(person.Sex);
+
         }
     }
 }
