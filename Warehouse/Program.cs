@@ -13,7 +13,7 @@ namespace Warehouse
             // L_2.14 metody
 
             ItemService itemService = new ItemService();
-            itemService.CreateListItems();
+            //itemService.CreateListItems();
             itemService.AddNewItem();
             List<Item> result = itemService.GetAllItems();
 

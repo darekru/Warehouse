@@ -17,8 +17,9 @@ namespace Warehouse
             return Items; 
         }
 
-        
-        public void CreateListItems()
+
+        //public void CreateListItems()
+        public ItemService()
         {
             List<Item> Items = new List<Item>();
             this.Items = Items;
